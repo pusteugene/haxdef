@@ -1,4 +1,6 @@
-const API_BASE = window.location.hostname === "localhost" ? "http://localhost:3000" : "";
+const API_BASE = window.location.hostname === "localhost"
+  ? "http://localhost:3000"
+  : "https://haxdef.onrender.com";
 
 function $(id) {
   return document.getElementById(id);
