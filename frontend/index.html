@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HaxDef Scanner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1>HaxDef Security Scan</h1>
+        <p class="sub">Automated scan via Nuclei. Use only for sites you own or have permission to test.</p>
+      </header>
+
+      <section class="card">
+        <label class="label" for="urlInput">Website URL</label>
+        <div class="row">
+          <input id="urlInput" class="input" placeholder="https://example.com" />
+          <button id="scanBtn" class="btn" type="button">Scan</button>
+        </div>
+        <div class="row row-actions">
+          <button id="auditBtn" class="btn btn-secondary" type="button" disabled>Get Full Audit</button>
+          <span id="status" class="status"></span>
+        </div>
+      </section>
+
+      <section class="card">
+        <pre id="result" class="result" aria-live="polite"></pre>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
