@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:3000";
+const API_BASE = window.location.hostname === "localhost" ? "http://localhost:3000" : "";
 
 function $(id) {
   return document.getElementById(id);
@@ -28,7 +28,7 @@ async function scan() {
     const timeoutMs = 70_000;
     const t = setTimeout(() => controller.abort(), timeoutMs);
 
-    const res = await fetch(`${API_BASE}/scan`, {
+    const res = await fetch(`${API_BASE}/api/scan`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url }),
